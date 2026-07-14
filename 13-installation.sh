@@ -24,27 +24,3 @@ VALIDATE $? "Nginx"
 
 dnf install python3 -y
 VALIDATE $? "python3"
-if [ $? -ne 0 ]; then
-    echo "Error:: Installing MySql is failure"
-    exit 1
-else
-    echo "Installing MySql is SUCCESS"
-fi
-
-dnf install nginx -y
-
-if [ $? -ne 0 ]; then
-    echo "Error:: Installing Nginx is failure"
-    exit 1
-else
-    echo "Installing Nginx is SUCCESS"
-fi
-
-dnf install mongodb-mongosh -y
-
-if [ $? -ne 0 ]; then
-    echo "Error:: Installing mongodb-mongosh is failure"
-    exit 1
-else
-    echo "Installing mongodb-mongosh  is SUCCESS"
-fi
